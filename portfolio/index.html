@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>MY PORTFOLIO</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jfif" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#gallery">Gallery</a></li> 
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <br> Bharatam Sai <br><span>Sachin</span></h1>
+            </div>
+        </div>
+    </div>
+<!---------------------about------------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/abtme.png"> 
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am an individual who is constantly trying to learn new things. My hobbies include sketching, playing cricket and listening to music.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>C</span><br>Advanced Level</li>
+                            <li><span>Java</span><br>Advanced Level</li>
+                            <li><span>Python</span><br>Basic Level</li>
+                            <li><span>HTML</span><br>Intermediate Level</li>
+                            <li><span>CSS</span><br>Intermediate Level</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>2021</span><br>HR Analytics Using IBM Cognos</li>
+                            <li><span>2022</span><br>Medical Store Management System</li>
+                            <li><span>2023</span><br>Drowsiness Detection System Using ML</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2019-23</span><br>Geethanjali College Of Engineering and Technoogy, Telangana</li>
+                            <li><span>2017-19</span><br>Sri Chaitanya Junior Kalasala, Telangana</li>
+                            <li><span>2016-17</span><br>Bhavans Sri Ramakrishna Vidyalaya, Telangana</li>
+                        </ul>
+                    </div> 
+                </div> 
+            </div>
+        </div>
+    </div>
+    <!---------------------contact me----------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>sachinbharatam6666@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>9618871177</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/bharatham.sachin"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/sachin-bharatam-8b9058233/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/sachin_hitman_6/"><i class="fa-brands fa-instagram"></i></a>
+                    </div> 
+                    <a href="images/BS RESUME.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <img src="images/contact.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------gallery---------------------------->
+    <div class="gallery-header">
+        <h1>G A L L E R Y</h1>
+    </div>
+    <div id="gallery">
+        <img src="https://c4.wallpaperflare.com/wallpaper/193/556/883/car-neon-chevrolet-corvette-race-cars-hd-wallpaper-preview.jpg">
+        <img src="https://wallpaperaccess.com/full/14358.jpg">
+        <img src="https://www.teahub.io/photos/full/5-52647_superhero-wallpaper-hd-for-iphone-20228-full-hd.jpg">
+        <img src="https://wallpapercave.com/wp/wp5187169.jpg">
+        <img src="https://i.pinimg.com/originals/e2/70/18/e270180e4abbf75b1b2d77e6bedc5b03.jpg">
+        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTR1-2F0mH2iFJvpFE24fMrB6kLJDsf7_S7EEi2aUY7lmZMh32l">
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/95764594c5.js" crossorigin="anonymous"></script>
+    </body>
+</html>
